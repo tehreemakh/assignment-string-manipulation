@@ -1,0 +1,39 @@
+QS 2: 2. Replace selected character with another in entered string.
+// Visalization 
+Str1 = "androemeda"
+Char1 = 'a' -----which character to replace
+Char2 = 'x' ----- chracter to replace.
+Str2 = "xndromedx"
+
+// declaration
+DECLARE Str1, Str2 : STRING
+DECLARE Char1, Char2, Char3 : CHARACTER
+DECLARE i : INTEGER
+
+//initialization
+Str1 = ""
+Str2 = ""
+Char1 = ''
+Char2 = ''
+Char3 = ''
+i = 0
+
+input string and characters
+INPUT "enter first string: ", Str1
+INPUT "enter character to replace: ", Char1
+INPUT "enter character to replace with: ", Char2
+
+//process
+FOR i = 1 TO LENGTH(Str1)
+Char3 = MID(Str1, i ,1)
+
+ IF Char1 <> Char3 
+   THEN Str2 = Str2 + Char3
+ ELSE 
+   Str2 = Str2 + Char2
+ ENDIF
+NEXT
+ // output
+OUTPUT "final string is: ", Str2
+
+
