@@ -18,6 +18,7 @@ Char2 = ''
 Char3 = ''
 i = 0
 
+// input variables
 input string and characters
 INPUT "enter first string: ", Str1
 INPUT "enter character to replace: ", Char1
