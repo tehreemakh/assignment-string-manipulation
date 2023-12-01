@@ -1,0 +1,45 @@
+QS 3 : Count and output the NUMBER of an entered character in a string. Also output separate counts for alphabets (cap & small together; case neutral), digits and other characters in same entered string.
+
+// declare variables
+DECLARE Str1 : STRING
+DECLARE DigitCount, AlphaCount, SpecialCount, CharacterCount: INTEGER
+DECLARE Char1, Char2 : CHAR
+DECLARE i : INTEGER
+
+//initializing variables
+Str1 = ""
+Char1 =''
+Char2 =''
+i = 0
+DigitCount = 0
+AlphaCount = 0 
+SpecialCount = 0 
+CharacterCount = 0
+
+//input of string and specific character to be counted
+INPUT "enter the string: ", Str1
+INPUT "enter the character to be counted: ", Char 1
+
+// process
+For i = 1 TO LENGTH (Str1)
+Char2 = MID (Char2, i, 1)
+
+IF Char2 >= '0' AND Char2 <= '9'
+  THEN DigitCount = DigitCount + 1
+ELSEIF Char2 >= 'A' AND  Char2 <= 'z'
+  THEN AlphaCount = AlphaCount + 1
+ELSEIF Char 2 >= 'a' AND Char2 <= 'z'
+  THEN AlphaCount = AlphaCount + 1
+ELSE SpecialCount = SpecialCount + 1
+ENDIF
+
+IF Char2 = Char1
+  THEN CharacterCount = CharacterCount + 1
+ENDIF
+NEXT
+
+//output of the different counts
+OUTPUT " no of character to be counted is: ",CharacterCount
+OUTPUT " no of alphabets (small and caps)are: ",AlphaCount
+OUTPUT " no of digits are: ",DigitCount
+OUTPUT " no of special characters are: ",SpecialCount
