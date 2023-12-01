@@ -1,0 +1,24 @@
+QS 1
+// to check if all alphabets are present in a string. 
+DECLARE Str1, Alpha : STRING
+DECLARE Char1 : CHARACTER
+DECLARE i : INTEGER
+DECLARE isPanagram: BOOLEN
+
+Str1 = ""
+Alpha = ""
+Char1 = ''
+i = 0
+
+
+INPUT "Enter the string: ",Str1
+Str1 = UCASE(Str1)
+Alpha = "ABCDEFGHIJKLMNOPQRSTUVWYXZ"
+isPanagram = TRUE
+FOR i = 1 TO LENGHT(Alpha)
+Char1 = MID(Alpha, i, 1)
+IF LOCATE(Str1, Char1) = 0 THEN isPanagram = FALSE
+EXIT FOR
+NEXT
+IF isPanagram = FALSE THEN OUTPUT "all alphabets present in the string"
+ELSE OUTPUT "all alphabets are not present in the string"
