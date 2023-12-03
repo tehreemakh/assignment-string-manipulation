@@ -22,10 +22,10 @@ Module Program
         Char1 = Console.ReadLine()
 
 
-        'process 
+        'loop starts 
         For i = 1 To Len(Str1)
             Char2 = Mid(Str1, i, 1)
-            ' check for no of alphabets
+            ' conditions to check if each character is a digit, alphabet or a special character
             If (Asc(Char2) >= 65 And Asc(Char2) <= 90) Or (Asc(Char2) >= 97 And Asc(Char2) <= 122) Then
                 AlphaCount = AlphaCount + 1
                 ' check for no of digits
