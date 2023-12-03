@@ -1,0 +1,33 @@
+QS5: Find the count of vowels characters in an entered string separately.
+
+//declaration
+DECLARE Str1 : STRING
+DECLARE Ch : CHAR
+DECLARE A,E,I,O,U,i : INTEGER
+
+//initialization of variables:
+Str1=""
+Ch=''
+i=0
+A=0
+E=0
+I=0
+O=0
+U=0
+
+//input of string
+INPUT "enter a string: ",Str1
+Str1 = UCASE(Str1)
+//loops starts to observe each character and count all vowels seperately
+FOR i = 1 TO LENGTH(Str1)
+Ch = MID(Str1, i, 1)
+CASE OF Ch
+'A' : A = A + 1
+'E' : E = E + 1
+'I' : I = I + 1
+'O' : O = O + 1
+'U' : U = U + 1
+NEXT
+
+// output no of each vowel
+OUTPUT "no of A's are: ", A, "no of E's are: ", E , "no of I's are: ", I, "no of O's are: ", O, "no of I's are: ",I
