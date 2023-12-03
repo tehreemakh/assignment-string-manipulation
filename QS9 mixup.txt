@@ -1,0 +1,26 @@
+QS8: mixup
+
+//declare all strings
+DECLARE Str1, Str2, Str3, Str4, Str5, Str6 : STRING
+
+//initialize
+Str1 = ""       Str2 = ""
+Str3 = ""       Str4 = ""
+Str5 = ""       Str6 = ""
+
+//input 2 strings
+INPUT "enter first string: ", Str1
+INPUT "enter second string: ", Str2
+
+
+Str3 = MID(Str1, 3, LENGTH(Str1) - 2)  //remove first 2 chars of str1 and insert remaining chars in str 3
+Str4 = MID(Str2, 3, LENGTH(Str2) - 2)  //remove first 2 chars of str2 and insert remaining chars in str 4
+Str5 = LEFT (Str1, 2)                  // variable contains first two chars of str 1
+Str6 = LEFT (Str2, 2)                  // variable contains first two chars of str 2
+
+Str1 = Str6 + Str3      //add first two char of str2, and remaining chars of str1
+Str2 = Str5 + Str4      //add first two char of str1, and remaining chars of str2
+
+//output final string 
+OUTPUT "final string is: ", Str1 + " " + Str2
+
