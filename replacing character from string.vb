@@ -22,16 +22,17 @@ Module Program
         Console.Write("enter character to replace with: ")
         Char2 = Console.ReadLine()
 
-        'process
+        'loop starts 
         For i = 1 To Len(Str1)
             Char3 = Mid(Str1, i, 1)
+        'condition to compare characters
             If Char1 <> Char3 Then
                 Str2 = Str2 + Char3
             Else Str2 = Str2 + Char2
             End If
         Next
 
-        'output
+        'output final string with prompt
         Console.WriteLine("final string is: " + Str2)
         Console.ReadLine()
 
