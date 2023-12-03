@@ -13,13 +13,17 @@ Module Program
         Str1 = ""
         Alpha = ""
 
-        ' input and processing
+        ' output prompt for inputting string
         Console.Write("Enter the string: ")
         Str1 = UCase(Console.ReadLine)
+        ' variable introduced containing characters from which characters of string would be located
         Alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        ' flag introduced which is TRUE when string is panagram and FALSE when it is not.
         IsPanagram = True
+        ' loop starts
         For i = 1 To Len(Alpha)
             Char1 = Mid(Alpha, i, 1)
+        ' function to locate characters of strings among the characters of the variable Alpha, with condition.
             If InStr(Str1, Char1) = 0 Then
                 IsPanagram = False
                 Exit For
