@@ -24,17 +24,17 @@ INPUT "enter first string: ", Str1
 INPUT "enter character to replace: ", Char1
 INPUT "enter character to replace with: ", Char2
 
-//process
+//loop starts
 FOR i = 1 TO LENGTH(Str1)
 Char3 = MID(Str1, i ,1)
-
+// condition for comparing characters
  IF Char1 <> Char3 
    THEN Str2 = Str2 + Char3
  ELSE 
    Str2 = Str2 + Char2
  ENDIF
 NEXT
- // output
+ // output final string with suitable prompt
 OUTPUT "final string is: ", Str2
 
 
