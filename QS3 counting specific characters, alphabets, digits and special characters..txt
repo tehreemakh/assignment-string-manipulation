@@ -20,10 +20,11 @@ CharacterCount = 0
 INPUT "enter the string: ", Str1
 INPUT "enter the character to be counted: ", Char 1
 
-// process
+// loop starts
 For i = 1 TO LENGTH (Str1)
 Char2 = MID (Char2, i, 1)
 
+//condition to check if each character is a digit, alphabet or a special character
 IF Char2 >= '0' AND Char2 <= '9'
   THEN DigitCount = DigitCount + 1
 ELSEIF Char2 >= 'A' AND  Char2 <= 'z'
