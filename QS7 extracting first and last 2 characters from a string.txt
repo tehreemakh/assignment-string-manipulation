@@ -1,0 +1,23 @@
+QS7: output first 2 and last 2 characters of a string
+
+//declaration of strings
+DECLARE Str1, Str2, Str3, Str4 : STRING
+//initialization
+Str1 = ""
+Str2 = ""
+Str3 = ""
+Str4 = ""
+
+//output prompt to take input of string
+INPUT "enter a string: ",Str1
+
+//condition to check if lenght of string is more or less than 2
+IF LENGTH(Str1) > 2 THEN 
+Str2 = LEFT (Str1, 2)   //functions to extract first 2 and last 2 words
+Str3 = RIGHT(Str1, 2)
+Str4 = Str2 + Str3      //concatenation of strings.
+OUTPUT "final string: ", Str4
+ELSE OUTPUT "final string is: ",Str1    //output same string if length is less than or equal to 2.
+ENDIF
+
+
