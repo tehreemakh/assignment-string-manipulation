@@ -12,6 +12,7 @@ Module Program
         ' initialization
         Str1 = ""
         Alpha = ""
+        Char1 = ""
 
         ' output prompt for inputting string
         Console.Write("Enter the string: ")
