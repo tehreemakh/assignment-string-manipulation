@@ -1,0 +1,25 @@
+QS6: donuts
+
+//declare variable Count
+DECLARE Count: INTEGER
+
+//initialize variable to 0
+Count = 0
+
+//take input of no of donuts
+INPUT "enter no of donuts: ", Count
+
+//condition for outputting no of donuts.
+IF Count < 10 THEN OUTPUT "no of donuts: ",Count
+IF Count >= 10 THEN OUTPUT "no of donuts:many"
+
+
+
+
+
+
+
+
+
+
+
