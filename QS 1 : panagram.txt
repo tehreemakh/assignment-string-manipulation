@@ -12,17 +12,21 @@ Alpha = ""
 Char1 = ''
 i = 0
 
-//input and process
+//output prompt for inputting string 
 INPUT "Enter the string: ",Str1
 Str1 = UCASE(Str1)
+//variable to locate characters of string in
 Alpha = "ABCDEFGHIJKLMNOPQRSTUVWYXZ"
+//flag introduced, TRUE when string is panagram and FALSE when not panagram
 isPanagram = TRUE
+//loop starts
 FOR i = 1 TO LENGHT(Alpha)
 Char1 = MID(Alpha, i, 1)
+//function to locate characters of Alpha in the string
 IF LOCATE(Str1, Char1) = 0 THEN isPanagram = FALSE
 EXIT FOR
 NEXT
 
-//output suitable prompts
+//output suitable prompts 
 IF isPanagram = FALSE THEN OUTPUT "all alphabets present in the string"
 ELSE OUTPUT "all alphabets are not present in the string"
