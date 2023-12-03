@@ -1,0 +1,35 @@
+QS8 : fixstart
+//declare all variables
+DECLARE Str1, Str2, Str3 : STRING
+DECLARE: Char1, Char2, Char3 : CHAR
+DECLARE i : INTEGER
+
+//Initialization
+Str1 = ""
+Str2 = ""
+Str3 = ""
+Char1 = ''
+Char2 = ''
+Char3 = ''
+i = 0
+
+//input a string
+INPUT "enter a string: ", Str1
+
+//variable for first character of string, and the character which will replace.
+Char1 = LEFT(Str1, 1)
+Char2 = *
+
+//loop starts
+FOR i = 2 TO LENGTH(Str1)
+Char3 = MID(Str1, i, 1) //variable in which each character is stored as the loop continues
+IF Char3 <> Char1 THEN //condition, if character is not equal to the first character
+Str2 = Str2 + Char3
+ELSE Str2 = Str2 + Char2  //character is equal to first character
+ENDIF
+NEXT
+
+Str3 = Char1 + Str2   //concatenation.
+
+//output final string
+OUTPUT "final string is: ",Str3
