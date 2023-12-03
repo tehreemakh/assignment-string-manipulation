@@ -1,0 +1,29 @@
+QS10: verbing
+//declare strings
+DECLARE Str1, Str2, Str3 : STRING
+
+//initialize
+Str1 = ""
+Str2 = ""
+Str3 = ""
+
+//input string
+INPUT "enter a string", Str1
+Str2 = "ing"    //introduce variables to store the string which is to be added to the entered string
+Str3 = "ly"
+
+//condition, if length is more than or equal to 3 and string does not have "ing" in the end
+IF LENGTH(Str1) >= 3 AND RIGHT(Str1, 3) <> Str2 THEN 
+Str1 = Str1 + Str2
+OUTPUT "final string is: ",Str1
+
+//condition, if length is more than or equal to 3 and string does have "ing" in the end
+ELSEIF LENGTH(Str1) >= 3 AND RIGHT(Str1, 3) = Str2 THEN
+Str1 = Str1 + Str3
+OUTPUT "final string is: ",Str1
+
+//condition, if length is less than 3.
+ELSEIF LENGTH(Str1) < 3 THEN
+OUTPUT "final string is: ",Str1
+ENDIF
+
