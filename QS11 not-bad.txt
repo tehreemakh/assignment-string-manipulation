@@ -1,0 +1,23 @@
+QS 11: not-bad
+
+//declare variables
+DECLARE Str1, ResultString : STRING
+DECLARE n_pos, b_pos : INTEGER
+
+//prompt to input string
+INPUT "enter string: ", Str1
+
+//find postition of strings "not" and "bad" in the entered string
+n_pos = LOCATE( Str1, "not")
+b_pos = LOCATE( Str1, "bad")
+
+//condition to check if pos of "not" and "bad" is not equal to -1, and "bad" comes after "not"  
+If n_pos <> -1 AND b_pos <> -1 AND b_pos > n_pos THEN
+  ResultString = Left(Str1, n_pos - 1)  + "good"
+  OUTPUT ResultString
+//'if above conditions are false, then output the string as it is.
+ELSE OUTPUT Str1
+ENDIF
+
+
+
