@@ -1,0 +1,38 @@
+QS4 : find the character that occurs the most in a string.
+
+//declare variables
+DECLARE Str1 : STRING
+DECLARE MaxCount, i, j, Count : INTEGER
+DECLARE MaxChar, Char1, Char2 : CHAR
+
+//initialize
+Str1 = ""
+MaxCount = 0
+MaxChar = ""
+Count = 0
+i = 0
+j = 0
+
+//prompt to input string
+INPUT "enter string: ", Str1
+
+//nested loops
+FOR i = 1 To LENGTH(Str1)
+  Char1 = Mid(Str1, i, 1)
+  Count = 0
+    FOR j = 1 To LENGTH(Str1)
+      Char2 = Mid(Str1, j, 1)
+     IF Char2 = Char1 THEN  //condition to check if outer current char is equal to inner current char
+       Count = Count + 1   '//increment count by one if condition is true.
+     END IF
+    NEXT     'inner loop ended
+  IF Count > MaxCount THEN  //condition to find the max count, and character which occurs the most.
+     MaxCount = Count
+     MaxChar = Char1
+  ENDIF
+NEXT
+
+//ouput character.
+OUTPUT "most occuring character is: ", MaxChar
+
+
