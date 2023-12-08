@@ -8,6 +8,11 @@ Module Program
         Dim Str1 As String
         Dim n_pos, b_pos As Integer
 
+        'initialize
+        Str1 = ""
+        n_pos = 0
+        b_pos = 0
+
         'prompt to input string
         Console.WriteLine("enter a string: ")
         Str1 = Console.ReadLine()
