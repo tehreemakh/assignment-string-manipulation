@@ -4,6 +4,12 @@ QS 11: not-bad
 DECLARE Str1, ResultString : STRING
 DECLARE n_pos, b_pos : INTEGER
 
+//initialize 
+Str1 = ""
+ResultString = ""
+n_pos = 0
+b_pos = 0
+
 //prompt to input string
 INPUT "enter string: ", Str1
 
